@@ -17,11 +17,14 @@ Researched and analyzed open ports for potential vulnerabilities.
 # 📊 Scan Results Summary
 # 🖥️ Windows Host (10.145.94.123)
 Port	Service	Description	Risk Level
-135	MSRPC	Windows RPC – used for DCOM services	⚠️ Medium – Target for Windows exploits
-139	NetBIOS-SSN	File/Printer sharing (older systems)	❌ High – Legacy protocol, exploitable
-445	Microsoft-DS	SMB over TCP (file sharing)	❌ High – Exploited by malware (e.g., WannaCry)
-902	ISS RealSecure	VMware ESXi remote management port	⚠️ Medium – If VMware not in use, consider disabling
-912	Apex Mesh	Used by VMware/other internal services	⚠️ Medium – Rare port, review if needed
+| **Port** | **Service**    | **Description**                        | **Risk Level** | **Recommendation**                                                                    |
+| -------- | -------------- | -------------------------------------- | -------------- | ------------------------------------------------------------------------------------- |
+| **135**  | MSRPC          | Windows RPC – used for DCOM services   | ⚠️ Medium      | Restrict access via firewall; required for some Windows functions but often targeted. |
+| **139**  | NetBIOS-SSN    | File/Printer sharing (legacy systems)  | ❌ High         | Disable if not needed; legacy protocol vulnerable to various exploits.                |
+| **445**  | Microsoft-DS   | SMB over TCP (file sharing)            | ❌ High         | Block externally; patch regularly. Exploited by ransomware like WannaCry.             |
+| **902**  | ISS RealSecure | VMware ESXi remote management          | ⚠️ Medium      | Disable if VMware is not in use; restrict access internally.                          |
+| **912**  | Apex Mesh      | Used by VMware/other internal services | ⚠️ Medium      | Verify usage; restrict or disable if not required.                                    |
+
 # 🐧 Kali Linux Host (10.145.94.21)
 Port	Service	Description	Risk Level
 53	DNS	Domain Name System	⚠️ Medium – Secure if properly configured
