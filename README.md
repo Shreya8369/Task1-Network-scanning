@@ -27,7 +27,10 @@ Port	Service	Description	Risk Level
 
 # 🐧 Kali Linux Host (10.145.94.21)
 Port	Service	Description	Risk Level
-53	DNS	Domain Name System	⚠️ Medium – Secure if properly configured
+| **Port** | **Service** | **Description**    | **Risk Level**                            |
+| -------- | ----------- | ------------------ | ----------------------------------------- |
+| 53       | DNS         | Domain Name System | ⚠️ Medium – Secure if properly configured |
+
 # 🖼️ Screenshots
 All screenshots are available in the 'Screenshot for Windows' and 'Screenshot for Linux' folder:
 
